@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- You write javascript at top, but it load after using this 'defer and module type' -->
+    <script defer type="module">
+        // How to Show Content of Template tag
+        const main = document.getElementById('template-content');
+        const template = document.getElementById('template-name');
+        const content = template.content.cloneNode(true);
+        main.appendChild(content);
+    </script>
+</head>
+<body>
+    <!-- Template Tag -->
+    <h2>How Template Tag Surprised Me!!</h2>
+    <template id="template-name">
+        <table align="center">
+            <tr>
+                <td align='center'>Tag Name</td>
+                <td align='center'>Use Case</td>
+            </tr>
+            <tr>
+            <td>Template</td>
+            <td>To Use Same HTML Code Structure Dynamically</td>
+            </tr>
+        </table>
+    </template>
+    <main id="template-content"></main>
+    <!-- slot tag will be used in web components project -->
+</body>
+</html>
